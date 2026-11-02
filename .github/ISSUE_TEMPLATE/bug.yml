@@ -1,0 +1,96 @@
+name: Bug report
+description: Report broken behavior, a crash, or a regression in Tiller.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Tiller runs on your machine and uses your own agent
+        subscriptions, so please check that nothing private is in here: no logs,
+        prompts, file paths or project names. Replace them with `<home>`,
+        `<project>` and `<host>`.
+
+        Screenshots and recordings help a lot. Drag them in after the issue is
+        created; the app cannot attach them for you.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I removed anything private from the text below.
+          required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, and what Tiller did instead.
+      placeholder: I opened a thread and the composer never appeared.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The shortest sequence that shows the problem, and how often it happens.
+      placeholder: |
+        1. Open the app
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnosis
+    attributes:
+      label: What you already found
+      description: Optional. Anything you or an agent worked out, with no logs or paths pasted in.
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Tiller version
+      description: Settings → About. The app fills this in for you.
+      placeholder: 0.1.6
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: The app fills this in for you.
+      placeholder: macOS 15.3.0
+    validations:
+      required: true
+
+  - type: input
+    id: arch
+    attributes:
+      label: Architecture
+      description: The app fills this in for you. Optional for hand-written reports.
+      placeholder: arm64
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Optional. Describe what a log said rather than pasting the log.
+    validations:
+      required: false
+
+  - type: input
+    id: related
+    attributes:
+      label: Related issues
+      description: Optional. Issues or discussions that look like the same problem.
+    validations:
+      required: false

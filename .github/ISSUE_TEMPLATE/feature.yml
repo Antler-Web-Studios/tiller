@@ -1,0 +1,61 @@
+name: Feature request
+description: Suggest an improvement or a new capability for Tiller.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem you want solved before the solution you have in mind.
+        Keep it to one request, and leave out anything private.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: What you are trying to do today, and where Tiller gets in the way.
+      placeholder: I run the same review workflow every morning and rebuild it by hand.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+      description: The smallest change that would fix the problem for you.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you tried
+      description: Optional. Workarounds, other tools, or why they did not fit.
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Tiller version
+      description: Settings → About. The app fills this in for you.
+      placeholder: 0.1.6
+    validations:
+      required: false
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      description: The app fills this in for you.
+      placeholder: macOS 15.3.0
+    validations:
+      required: false
+
+  - type: input
+    id: arch
+    attributes:
+      label: Architecture
+      description: The app fills this in for you.
+      placeholder: arm64
+    validations:
+      required: false
